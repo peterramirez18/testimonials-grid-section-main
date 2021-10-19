@@ -1,0 +1,161 @@
+@import 'variables';
+@import 'globlas';
+
+
+.testimonials{
+     position: relative;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-areas: 
+     'uno      uno       dos       tres'
+     'cuatro   cinco     cinco     tres';
+
+     padding: 10.25rem;
+     column-gap: 2rem;
+     row-gap: 1.5rem;
+     background-color: #EDF2F8;
+
+     @media (max-width: 1024px) {
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          'uno'
+          'dos'
+          'cuatro'
+          'cinco'
+          'tres'
+          ;
+
+          padding: 2rem;
+     }
+
+
+     &_1, &_2, &_3, &_4, &_5{
+          padding: 1.3rem 1.9rem;
+          border-radius: 0.5rem;
+     }
+
+     &_1{
+          background-color: $ModerateViolet;
+          background-image: url(../images/bg-pattern-quotation.svg);
+          background-repeat: no-repeat;
+          background-position: 82% 0%;
+          grid-area: uno;
+
+          & img{
+               border: solid 2px $ModerateVioletLight;
+          }
+          
+     }
+
+     &_2{
+          background-color: $VeryDarkGrayishBlue;
+          grid-area: dos;
+     }
+
+     &_3{
+          background-color: $White;
+          grid-area: tres;
+     }
+
+     &_4{
+          background-color: $White;
+          grid-area: cuatro;
+     }
+
+     &_5{
+          background-color: $VeryDarkBlackishBlue;
+          grid-area: cinco;
+
+          & img{
+               border: solid 2px $ModerateViolet;
+          }
+     }
+
+     .person{
+          display: flex;
+          gap: 1.1rem;
+          align-items: center;
+          
+          & img{
+               width: 1.75rem;
+               border-radius: 50%;
+          }
+          
+
+          &_info{
+               & h1{
+                    font-size: 0.8rem;
+                    line-height: 1.1rem;
+                    color: $LightGrayishBlue;
+                    font-weight: 500;
+               }
+
+               & h2{
+                    font-size: 0.8rem;
+                    color: $LightGrayishBlue;
+                    font-weight: 500;
+                    opacity: 0.5;
+               }
+          }
+     }
+
+     &_titles{
+          font-size: 1.2rem;
+          line-height: 1.45rem;
+          margin-top: 1.15rem;
+          word-spacing: 0.13rem;
+          color: $White;
+          font-weight: 600;
+     }
+
+     & p{
+          font-size: 0.8rem;
+          margin-top: 1.2rem;
+          line-height: 1.1rem;
+          margin-bottom: 0.8rem;
+          color: $LightGrayishBlue;
+          font-weight: 500;
+          opacity: 0.5;
+     }
+
+     .testimonials_3, .testimonials_4{
+
+          & .testimonials_titles{
+               color: $VeryDarkGrayishBlue;
+          }
+          & p{
+               color: $VeryDarkGrayishBlue;
+          }
+
+          .person_info{
+               & h1{
+                    color: $VeryDarkGrayishBlue;
+               }
+
+               & h2{
+                    color: $VeryDarkGrayishBlue;
+               }
+          }
+     }
+
+    
+}
+
+
+.attribution{
+     position: absolute;
+     bottom: 1rem;
+     left: 40%;
+     right: 40%;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     color: $VeryDarkGrayishBlue;
+
+     a{     
+          text-decoration: none;
+          color: $ModerateViolet !important;
+     }
+}
+
+
