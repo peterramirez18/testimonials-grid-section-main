@@ -3,19 +3,30 @@
 
 
 .testimonials{
-     position: relative;
+     height: 100vh;
      display: grid;
      grid-template-columns: 1fr 1fr 1fr 1fr;
      grid-template-areas: 
      'uno      uno       dos       tres'
      'cuatro   cinco     cinco     tres';
 
-     padding: 10.25rem;
+     padding: 6rem 10vw 6rem 10vw;
      column-gap: 2rem;
      row-gap: 1.5rem;
-     background-color: #EDF2F8;
+     
 
-     @media (max-width: 1024px) {
+     @media (max-width: $breakpoint-medium) {
+
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-areas: 
+          'uno      uno       dos       '
+          'cuatro   cinco     cinco     '
+          'tres     tres      tres';
+          padding: 2rem;
+     }
+
+     @media (max-width: $breakpoint-small) {
+          
           grid-template-columns: 1fr;
           grid-template-areas: 
           'uno'
@@ -24,8 +35,6 @@
           'cinco'
           'tres'
           ;
-
-          padding: 2rem;
      }
 
 
@@ -141,21 +150,5 @@
     
 }
 
-
-.attribution{
-     position: absolute;
-     bottom: 1rem;
-     left: 40%;
-     right: 40%;
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-     color: $VeryDarkGrayishBlue;
-
-     a{     
-          text-decoration: none;
-          color: $ModerateViolet !important;
-     }
-}
 
 

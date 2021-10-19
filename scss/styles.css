@@ -12,28 +12,36 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: #EDF2F8;
 }
 
 .testimonials {
-  position: relative;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-areas: 'uno      uno       dos       tres' 'cuatro   cinco     cinco     tres';
-  padding: 10.25rem;
+  padding: 6rem 10vw 6rem 10vw;
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
   row-gap: 1.5rem;
-  background-color: #EDF2F8;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1098px) {
+  .testimonials {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'uno      uno       dos       ' 'cuatro   cinco     cinco     ' 'tres     tres      tres';
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 725px) {
   .testimonials {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: 'uno' 'dos' 'cuatro' 'cinco' 'tres';
-    padding: 2rem;
   }
 }
 
@@ -153,25 +161,5 @@ body {
 
 .testimonials .testimonials_3 .person_info h2, .testimonials .testimonials_4 .person_info h2 {
   color: #48556a;
-}
-
-.attribution {
-  position: absolute;
-  bottom: 1rem;
-  left: 40%;
-  right: 40%;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #48556a;
-}
-
-.attribution a {
-  text-decoration: none;
-  color: #7541c8 !important;
 }
 /*# sourceMappingURL=styles.css.map */
