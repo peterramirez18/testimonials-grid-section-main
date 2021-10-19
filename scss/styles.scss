@@ -51,7 +51,7 @@
           grid-area: uno;
 
           & img{
-               border: solid 2px $ModerateVioletLight;
+               outline: solid 2px $ModerateVioletLight;
           }
           
      }
@@ -76,7 +76,7 @@
           grid-area: cinco;
 
           & img{
-               border: solid 2px $ModerateViolet;
+               outline: solid 2px $ModerateViolet;
           }
      }
 
